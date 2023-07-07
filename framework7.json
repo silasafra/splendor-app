@@ -1,0 +1,18 @@
+{
+  "cwd": "C:\\PROJECTS\\desafio\\backup",
+  "type": [
+    "web"
+  ],
+  "name": "doctor-app",
+  "framework": "core",
+  "template": "single-view",
+  "bundler": "vite",
+  "cssPreProcessor": "scss",
+  "theming": {
+    "customColor": true,
+    "color": "#094067",
+    "darkMode": false,
+    "iconFonts": true
+  },
+  "customBuild": false
+}

@@ -1,0 +1,21 @@
+<template>
+  <div class="page">
+    <div class="page-content">
+      <div class="viewpoint">
+        <img class="bg-rounded" src="../assets/img/bg-rounded.svg" alt="" />
+        <h2>Take Care Of Your Health!</h2>
+        <p>With O Medic</p>
+        <div class="image_home">
+          <img src="../assets/img/image_home.png" alt="" />
+          <p>Manage your health ease with us</p>
+          <a class="btn-big" href="/form/">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  export default () => {
+    return $render;
+  };
+</script>

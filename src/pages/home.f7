@@ -1,0 +1,84 @@
+<template>
+  <div class="page" data-name="home">
+    <!-- Toolbar-->
+    <div class="toolbar toolbar-bottom">
+      <div class="toolbar-inner">
+        <a href="/load-something-that-doesnt-exist/"
+          ><div class="active">
+            <img src="../assets/icons/ico-home.svg" alt="" />
+            <p class="">Home</p>
+          </div></a
+        >
+
+        <div class="">
+          <img src="../assets/icons/ico-list.svg" alt="" />
+          <p class="d-none">List</p>
+        </div>
+        <div class="">
+          <img src="../assets/icons/ico-search.svg" alt="" />
+          <p class="d-none">Search</p>
+        </div>
+        <div class="">
+          <img src="../assets/icons/ico-profile.svg" alt="" />
+          <p class="d-none">Profile</p>
+        </div>
+      </div>
+    </div>
+    <!-- Scrollable page content-->
+    <div class="page-content">
+      <img class="bg-img" src="../assets/img/bg-home.png" alt="" />
+      <div class="block">
+        <p class="Welcome">Welcome</p>
+        <p class="user">Donna Troy</p>
+      </div>
+      <div class="block">
+        <img class="banner-img" src="../assets/img/banner.png" alt="" />
+      </div>
+      <div class="block services">
+        <h3>Our Services</h3>
+        <div class="icons">
+          <a href="#">
+            <img src="../assets/icons/icon-service04.svg" alt="" />
+          </a>
+          <a href="#">
+            <img src="../assets/icons/icon-service03.svg" alt="" />
+          </a>
+          <a href="#">
+            <img src="../assets/icons/icon-service02.svg" alt="" />
+          </a>
+          <a href="#">
+            <img src="../assets/icons/icon-service01.svg" alt="" />
+          </a>
+        </div>
+      </div>
+
+      <div class="block appointments">
+        <h3>Appointments</h3>
+
+        <div class="appointment-list">
+          <div class="list">
+            <div>Appointment date</div>
+            <img src="../assets/icons/icon-appointment.svg" alt="" />
+          </div>
+          <div class="list pink">
+            <div class="hour-list">
+              <span>08:00 </span>
+              <img src="../assets/icons/ico-right.svg" alt="" />
+              <span>08:00 </span>
+            </div>
+            <div>Wed Jun 20</div>
+          </div>
+          <div class="doc-lits">
+            <img src="../assets/img/doc-pic.png" alt="" />
+            <p>dr Indah Kusumaningrum</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  export default () => {
+    return $render;
+  };
+</script>

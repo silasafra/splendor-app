@@ -1,0 +1,106 @@
+<template>
+  <div class="page">
+    <div class="page-content">
+      <div class="form-container">
+        <div id="errorMessage">
+          <div class="alert">
+            <div class="msg">
+              <strong>Erro:</strong> o usuário
+              <strong>awesometeamasd</strong> não está cadastrado neste site. Se
+              você não está certo de seu nome de usuário, experimente o endereço
+              de e-mail.
+            </div>
+
+            <button
+              id="btnClose"
+              class="btn-default"
+              onclick="adicionarEventoFecharErro()"
+            >
+              ok
+            </button>
+          </div>
+        </div>
+        <img class="bg-rounded" src="../assets/img/bg-rounded.svg" alt="" />
+        <div class="title">Wellcome to our app!</div>
+        <form
+          class="list list-strong-ios list-dividers-ios list-outline-ios"
+          id="my-form"
+        >
+          <ul>
+            <li>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-input-wrap">
+                    <input
+                      class="input"
+                      type="email"
+                      name="email"
+                      placeholder="Your username or email
+                  "
+                    />
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-input-wrap">
+                    <input
+                      class="input"
+                      type="password"
+                      name="password"
+                      placeholder="Your password
+                  "
+                    />
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </form>
+        <div class="">
+          <a
+            class="button button-fill convert-form-to-data btn-default"
+            href="#"
+            >Login</a
+          >
+        </div>
+        <div class="link">
+          <p>Don't have an account? <a href="#">Signup here</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  window.addEventListener('load', function () {
+    const btnClose = document.getElementById('btnClose');
+    const errorMessage = document.getElementById('errorMessage');
+
+    function fecharErro() {
+      errorMessage.style.display = 'none';
+    }
+
+    btnClose.addEventListener('click', fecharErro);
+  });
+
+  export default (props, { $, $on, $f7 }) => {
+    $on('pageInit', () => {
+      $('.convert-form-to-data').on('click', function () {
+        var formData = $f7.form.convertToData('#my-form');
+        alert('passou');
+      });
+
+      $('.fill-form-from-data').on('click', function () {
+        var formData = {
+          email: 'john@doe.com',
+          password: 'female'
+        };
+        $f7.form.fillFromData('#my-form', formData);
+      });
+    });
+
+    return $render;
+  };
+</script>
